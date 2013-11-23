@@ -7,9 +7,6 @@ import java.util.Scanner;
 
 public class Main {
 
-	/**
-	 * @param args
-	 */
 	public static void main(String[] args) {
 		String filePath = args[0];
 		Scanner file = null;
