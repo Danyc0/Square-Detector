@@ -16,13 +16,13 @@ public class Main {
 			System.out.println("FileNotFoundException");
 			e.printStackTrace();
 		}
+		Importer importer = new Importer(file);
 		int numCases = file.nextInt();
 		file.nextLine();
 		for(int i = 0; i < numCases; i++){
 			System.out.print("Case #" + (i+1) + ": ");
 			int gridSize = file.nextInt();
 			file.nextLine();
-			Importer importer = new Importer(file);
 			char[][] grid = importer.importGrid(filePath, gridSize);
 			Solver solver = new Solver(grid);
 			boolean solved = solver.solve();
